@@ -68,7 +68,7 @@ const Invoice = () => {
           
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '10px' }}>
                     <b>Invoices owned to you</b>
-                    <Button style={{ color: '55BC55', fontSize: '13px' }} onClick={()=>setIsOpen(true)}>New Sales Invoice</Button>
+                    <Button style={{ color: '#55BC55', fontSize: '13px' }} onClick={()=>setIsOpen(true)}>New Sales Invoice</Button>
 
                 </div>
 
