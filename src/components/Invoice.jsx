@@ -31,7 +31,7 @@ const Invoice = () => {
         const xScale = d3.scaleBand().domain(categories).range([0, width]).padding(0.8);
         const yScale = d3.scaleLinear().domain([0, d3.max(stackedData, (d) => d3.max(d , (e) => e[1]))]).range([height, 0]);
     
-        const colorScale = d3.scaleOrdinal().domain(['value1', 'value2']).range(['green', 'rgb(97, 158, 97)']);
+        const colorScale = d3.scaleOrdinal().domain(['value1']).range(['#55BC55']);
     
         svg.selectAll('*').remove(); // Clear existing elements in the SVG
     
@@ -68,7 +68,7 @@ const Invoice = () => {
           
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '10px' }}>
                     <b>Invoices owned to you</b>
-                    <Button style={{ color: 'green', fontSize: '13px' }} onClick={()=>setIsOpen(true)}>New Sales Invoice</Button>
+                    <Button style={{ color: '55BC55', fontSize: '13px' }} onClick={()=>setIsOpen(true)}>New Sales Invoice</Button>
 
                 </div>
 

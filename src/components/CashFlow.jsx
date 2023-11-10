@@ -29,7 +29,7 @@ const CashFlow = () => {
       const xScale = d3.scaleBand().domain(categories).range([0, width]).padding(0.8);
       const yScale = d3.scaleLinear().domain([0, d3.max(stackedData, (d) => d3.max(d , (e) => e[1]))]).range([height, 0]);
   
-      const colorScale = d3.scaleOrdinal().domain(['value1', 'value2']).range(['green', 'rgb(97, 158, 97)']);
+      const colorScale = d3.scaleOrdinal().domain(['value1', 'value2']).range(['#7FC724', '#55BC55']);
   
       svg.selectAll('*').remove(); // Clear existing elements in the SVG
   

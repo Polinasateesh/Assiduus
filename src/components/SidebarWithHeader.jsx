@@ -84,7 +84,6 @@ import {
   }
   
   const NavItem = ({ icon, children, ...rest }) => {
-    console.log('rederedNavItem');
     return (
       <Box
         as="a"
@@ -99,7 +98,7 @@ import {
           role="group"
           cursor="pointer"
           _hover={{
-            bg: 'green',
+            bg: '#55BC55',
             color: 'white',
           }}
           {...rest}>

@@ -33,7 +33,7 @@ const CheckingAccount = () => {
       .append('path')
       .datum(data)
       .attr('fill', 'none')
-      .attr('stroke', 'green')
+      .attr('stroke', '#55BC55')
       .attr('stroke-width', 5)
       .attr('d', line);
 

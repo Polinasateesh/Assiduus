@@ -44,7 +44,7 @@ const FileAttachmentModal = ({isOpen,setIsOpen}) => {
             </Stack>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" onClick={handleSubmit}>
+            <Button colorScheme="green" onClick={handleSubmit}>
               Attach File
             </Button>
             <Button variant="ghost" onClick={onClose}>
