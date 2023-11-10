@@ -14,7 +14,7 @@ const CheckingAccount = () => {
     const width = 400 - margin.left - margin.right;
     const height = 200 - margin.top - margin.bottom;
 
-    const xScale = d3.scaleLinear().domain([0, 15]).range([0, width+margin.right]);
+    const xScale = d3.scaleLinear().domain([0, 15]).range([0, width]);
     const yScale = d3.scaleLinear().domain([-1.5, 1.5]).range([height, 0]);
 
     const line = d3
@@ -37,9 +37,9 @@ const CheckingAccount = () => {
       .attr('stroke-width', 5)
       .attr('d', line);
 
-      svg
+    svg
       .append('g')
-      .attr('transform', `translate(0, ${height}+${margin.top})`)
+      .attr('transform', `translate(${margin.left},${height + margin})`)
       .call(d3.axisBottom(xScale));
 
   }, [selectedMonth, selectedOption]);
@@ -60,8 +60,8 @@ const CheckingAccount = () => {
           <div style={{ marginRight: '10px' }}>
             <Select value={selectedOption} onChange={handleOptionChange}>
               <option value="Manage">Manage</option>
-              <option value="Date1">Date1</option>
-              <option value="Date2">Date2</option>
+              <option value="Date1">0-15</option>
+              <option value="Date2">16-30</option>
             </Select>
           </div>
           <div>
